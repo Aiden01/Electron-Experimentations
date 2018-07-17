@@ -1,0 +1,22 @@
+{
+  "name": "electronapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "cross-env NODE_ENV=dev cross-env APP_NAME=BlogApp electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ascli": "^1.0.1",
+    "cross-env": "^5.2.0",
+    "electron": "^2.0.5",
+    "eslint": "^5.1.0",
+    "jest": "^23.4.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {}
+}
