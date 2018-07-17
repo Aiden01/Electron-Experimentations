@@ -1,7 +1,6 @@
 const fs = require('fs')
 
 const { ipcMain } = require('electron')
-
 module.exports = class Manager {
 
 	/**
