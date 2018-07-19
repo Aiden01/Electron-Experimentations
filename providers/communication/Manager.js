@@ -1,10 +1,11 @@
 const fs = require('fs')
 
 const { ipcMain } = require('electron')
+const path = require('path')
 module.exports = class Manager {
 
 	/**
-     * Load the handlers
+     * @description Load the handlers
      * @param {string} directory 
      */
 	static load(directory) {
@@ -35,7 +36,7 @@ module.exports = class Manager {
 	}
 
 	/**
-	 * Removes the file extensions
+	 * @description Removes the file extensions
 	 * @param {Array} files 
 	 */
 	static removeExtensions(files) {
@@ -43,9 +44,11 @@ module.exports = class Manager {
 			/**
 			 * filter the names
 			 */
-			const filenames = await Promise.all(files.map( f => f.replace('.js', '') ))
-			 resolve(filenames)
+			const filenames = await Promise.all(files.map(f => path.basename(f, '.js') ))
+			resolve(filenames)
 		})
 	}
 
 }
+
+
