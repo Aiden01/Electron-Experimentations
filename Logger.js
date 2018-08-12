@@ -18,6 +18,10 @@ module.exports = class Logger {
         }
     }
 
+    /**
+     * Converts console logger to file logger's type
+     * @param {String} type The type of the log
+     */
     static convert(type) {
         switch (type) {
             case "ok":
