@@ -18,5 +18,8 @@
     "jest": "^23.4.1",
     "webpack-cli": "^3.0.8"
   },
-  "dependencies": {}
+  "dependencies": {
+    "log": "^1.4.0",
+    "winston": "^3.0.0"
+  }
 }

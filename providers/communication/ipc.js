@@ -1,7 +1,11 @@
 const path = require('path')
-const Manager = require('./Manager')
+const M = require('./Manager')
+const Manager = new M()
+const OsInfoHandler = require('./handlers/OsInfosHandler')
 
 /**
  * register the handlers
  */
-Manager.load(path.resolve(__dirname, 'handlers'))
+console.log(typeof OsInfoHandler)
+Manager.addHandler("os-info", OsInfoHandler)
+Manager.load()
