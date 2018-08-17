@@ -1,8 +1,7 @@
-const fs = require('fs')
-
+const { promises } = require('fs')
 const { ipcMain } = require('electron')
-const path = require('path')
 const Logger = require('../../Logger')
+
 module.exports = class Manager {
 
 	/**
@@ -33,7 +32,7 @@ module.exports = class Manager {
      * @param {Object} handler The object of the handler
      */
 	addHandler(name, handler) {
-		if (typeof handler !== 'function') throw new Error('function')
+		if (typeof handler !== 'function') throw new Error('Handler must be a function')
 		this.handlers.set(name, handler)
 	}
 
